@@ -18,6 +18,9 @@ services:
   letgo-hiring-challenge:
     image: letgo-hiring-challenge
     container_name: letgo-hiring-challenge
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://ecav:ecav123@mongodb:27017/booksdb
+    command: --spring.profiles.active=prod
     build:
       dockerfile: ./Dockerfile
     ports:
