@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ecav
+      MONGO_INITDB_ROOT_PASSWORD: ecav123
+      MONGO_INITDB_DATABASE: booksdb
+    volumes:
+      - ./script/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - mongo_data:/data
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: echo 'db.runCommand({serverStatus:1}).ok' | mongosh admin -u $$MONGO_INITDB_ROOT_USERNAME -p $$MONGO_INITDB_ROOT_PASSWORD --quiet | grep 1
+  letgo-hiring-challenge:
+    image: letgo-hiring-challenge
+    container_name: letgo-hiring-challenge
+    build:
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+volumes:
+  mongo_data:
