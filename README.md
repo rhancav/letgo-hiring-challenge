@@ -39,7 +39,7 @@ application, use the following Docker Compose commands:
 
    ```docker-compose up -d```
 4. The application and MongoDB will be started in separate containers. You can access the
-   application at `http://localhost:8080`.
+   application Swagger UI at `http://localhost:8080/api/swagger-ui/index.html`.
 
 5. To stop the containers when you're done, use the following command:
 
