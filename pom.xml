@@ -68,6 +68,11 @@
       <version>6.1.4</version>
     </dependency>
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+      <version>3.1.4</version>
+    </dependency>
+    <dependency>
       <artifactId>podam</artifactId>
       <groupId>uk.co.jemos.podam</groupId>
       <scope>test</scope>
