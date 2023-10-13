@@ -1,6 +1,6 @@
 # Library REST API
 
-This is a Spring Boot project for a Library REST API that allows admin users to manage books and reviews, while regular users can create reviews and access book data. The project uses Docker Compose for containerization and MongoDB as the database.
+This is a Spring Boot project for a letgo-hiring-challenge that allows admin users to manage books and reviews, while regular users can create reviews and access book data. The project uses Docker Compose for containerization and MongoDB as the database.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -17,7 +17,7 @@ Before running this project, ensure you have the following prerequisites:
 
 ## Getting Started
 
-Follow the steps below to set up and run the Library REST API.
+Follow the steps below to set up and run the letgo-hiring-challenge.
 
 ### Docker Compose
 
@@ -25,11 +25,11 @@ Docker Compose is used to containerize the project and its required services. To
 
 1. Clone the repository:
 
-   git clone https://github.com/your-username/library-rest-api.git
+   git clone https://github.com/rhancav/letgo-hiring-challenge.git
 
 2. Navigate to the project directory:
 
-     ```cd library-rest-api```
+     ```cd letgo-hiring-challenge```
 
 3. Build and start the Docker containers:
 
@@ -45,14 +45,14 @@ Docker Compose is used to containerize the project and its required services. To
 The Library REST API provides the following endpoints:
 
 - **Books**
-- `GET /api/books`: Retrieve all books.
-- `GET /api/books/{bookName}`: Retrieve all books by name.
-- `GET /api/books/author/{name}`: Retrieve all books by author name.
-- `POST /api/books`: Create a new book (admin users only).
-- `PUT /api/books`: Update a book (admin users only).
-- `DELETE /api/books/{id}`: Delete a book by ID (admin users only).
-- `GET /api/books/{bookId}/reviews`: Retrieve all reviews by book ID.
-- `POST /api/books/reviews`: Create a new review for a book (users only).
+- `GET /api/books`: Retrieve all books(Admins-Users).
+- `GET /api/books/{bookName}`: Retrieve all books by name (Admins-Users).
+- `GET /api/books/author/{name}`: Retrieve all books by author name (Admins-Users).
+- `POST /api/books`: Create a new book (Admins).
+- `PUT /api/books`: Update a book (Admins).
+- `DELETE /api/books/{id}`: Delete a book by ID (Admins).
+- `GET /api/books/{bookId}/reviews`: Retrieve all reviews by book ID (Admins-Users).
+- `POST /api/books/reviews`: Create a new review for a book (Admins-Users).
 - **Swagger UI**
 - `/api/swagger-ui/index.html`
 
@@ -61,6 +61,6 @@ The Library REST API provides the following endpoints:
 You can use tools like Postman, cURL, or any REST client to interact with the API. Make sure to set appropriate headers and permissions for admin and user actions.
 
 - Admin users should have the necessary privileges to access admin-specific endpoints.
-- User users can access user-specific endpoints to create reviews and retrieve book data.
+- Normal users can access user-specific endpoints to create reviews and retrieve book data.
 
 Feel free to explore and integrate this REST API into your projects!
