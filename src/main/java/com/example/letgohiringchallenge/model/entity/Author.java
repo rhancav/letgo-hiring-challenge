@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Author {
+
   @Pattern(regexp = "^[\\p{L}\\s]+$", message = "Should be alphabetic only")
   private String name;
   @NotBlank(message = "Shouldn't be blank")

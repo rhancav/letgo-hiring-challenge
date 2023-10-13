@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableMethodSecurity(securedEnabled = true)
-public class SecurityConfiguration{
+public class SecurityConfiguration {
 
   @Bean
   public InMemoryUserDetailsManager inMemoryUserDetailsManager() {

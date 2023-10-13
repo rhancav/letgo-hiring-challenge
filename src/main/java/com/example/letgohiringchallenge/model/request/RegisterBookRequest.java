@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
 public record RegisterBookRequest(
     @NotBlank(message = Errors.FIELD_CANNOT_BE_BLANK) @JsonProperty("name") String name,
     @Valid @NotNull(message = Errors.FIELD_CANNOT_BE_BLANK) @JsonProperty("author") Author author,

@@ -1,5 +1,12 @@
 package com.example.letgohiringchallenge.service;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.when;
+
 import com.example.letgohiringchallenge.model.converter.Converter;
 import com.example.letgohiringchallenge.model.entity.Book;
 import com.example.letgohiringchallenge.model.entity.Review;
@@ -25,20 +32,17 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class BookServiceImplTest {
 
+  static final String BOOK_ID = "E6129AB35";
   @InjectMocks
   BookServiceImpl bookService;
   @Mock
   BookRepository bookRepository;
   @Mock
   ReviewRepository reviewRepository;
-
-  static final String BOOK_ID = "E6129AB35";
   Book book;
   RegisterBookRequest registerBookRequest;
   UpdateBookRequest updateBookRequest;

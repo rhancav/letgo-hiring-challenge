@@ -1,8 +1,11 @@
 # Library REST API
 
-This is a Spring Boot project for a letgo-hiring-challenge that allows admin users to manage books and reviews, while regular users can create reviews and access book data. The project uses Docker Compose for containerization and MongoDB as the database.
+This is a Spring Boot project for a letgo-hiring-challenge that allows admin users to manage books
+and reviews, while regular users can create reviews and access book data. The project uses Docker
+Compose for containerization and MongoDB as the database.
 
 ## Table of Contents
+
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
     - [Docker Compose](#docker-compose)
@@ -21,7 +24,8 @@ Follow the steps below to set up and run the letgo-hiring-challenge.
 
 ### Docker Compose
 
-Docker Compose is used to containerize the project and its required services. To start the application, use the following Docker Compose commands:
+Docker Compose is used to containerize the project and its required services. To start the
+application, use the following Docker Compose commands:
 
 1. Clone the repository:
 
@@ -29,12 +33,13 @@ Docker Compose is used to containerize the project and its required services. To
 
 2. Navigate to the project directory:
 
-     ```cd letgo-hiring-challenge```
+   ```cd letgo-hiring-challenge```
 
 3. Build and start the Docker containers:
 
    ```docker-compose up -d```
-4. The application and MongoDB will be started in separate containers. You can access the application at `http://localhost:8080`.
+4. The application and MongoDB will be started in separate containers. You can access the
+   application at `http://localhost:8080`.
 
 5. To stop the containers when you're done, use the following command:
 
@@ -58,7 +63,8 @@ The Library REST API provides the following endpoints:
 
 ## Usage
 
-You can use tools like Postman, cURL, or any REST client to interact with the API. Make sure to set appropriate headers and permissions for admin and user actions.
+You can use tools like Postman, cURL, or any REST client to interact with the API. Make sure to set
+appropriate headers and permissions for admin and user actions.
 
 - Admin users should have the necessary privileges to access admin-specific endpoints.
 - Normal users can access user-specific endpoints to create reviews and retrieve book data.

@@ -38,6 +38,7 @@ public class GlobalExceptionHandler {
     baseHttpResponse.setMessage(exception.getMessage());
     return new ResponseEntity<>(baseHttpResponse, HttpStatus.BAD_REQUEST);
   }
+
   @ExceptionHandler(AccessDeniedException.class)
   public ResponseEntity<BaseHttpResponse> handleException(
       AccessDeniedException exception) {
@@ -46,6 +47,7 @@ public class GlobalExceptionHandler {
     baseHttpResponse.setSuccess(false);
     return new ResponseEntity<>(baseHttpResponse, HttpStatus.FORBIDDEN);
   }
+
   @ExceptionHandler(DocumentNotFoundException.class)
   public ResponseEntity<BaseHttpResponse> handleException(
       DocumentNotFoundException exception) {
